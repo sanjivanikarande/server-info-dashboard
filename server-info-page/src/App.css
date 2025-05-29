@@ -1,0 +1,194 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a; /* गडद बॅकग्राउंड */
+  color: #ffffff; /* पांढरा मजकूर */
+  overflow: hidden; /* अनावश्यक स्क्रोल बार टाळण्यासाठी */
+}
+
+.App {
+  display: flex;
+  height: 100vh; /* पूर्ण व्ह्यूपोर्ट उंची */
+}
+
+/* डाव्या बाजूचा नेव्हिगेशन बार */
+.left-sidebar {
+  width: 60px; /* लहान रुंदी */
+  background-color: #2a2a2a; /* थोडा वेगळा गडद रंग */
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* आयकॉनमधील अंतर */
+}
+
+.nav-item {
+  color: #aaaaaa; /* हलका राखाडी रंग */
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  writing-mode: vertical-lr; /* मजकूर उभा करण्यासाठी */
+  transform: rotate(180deg); /* मजकूर उलट्या दिशेने करण्यासाठी */
+}
+
+.nav-item.selected {
+  color: #ffffff; /* निवडल्यावर पांढरा */
+  font-weight: bold;
+}
+
+/* मुख्य कंटेंट क्षेत्र */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 40px;
+  overflow-y: auto; /* जर कंटेंट जास्त असेल तर स्क्रोलबारसाठी */
+}
+
+.page-title {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.server-overview {
+  background-color: #222222; /* थोडा गडद बॉक्स */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.server-overview h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.server-description, .discord-link {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 5px;
+}
+
+.action-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-join {
+  background-color: #007bff; /* निळा रंग */
+  color: #ffffff;
+}
+
+.btn-join:hover {
+  background-color: #0056b3;
+}
+
+.btn-spectate, .btn-commander {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.btn-spectate:hover, .btn-commander:hover {
+  background-color: #555555;
+}
+
+.btn-favorite {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* हिरव्या रंगात हायलाइट केलेला डेटा विभाग */
+.data-section {
+  border: 2px solid #00ff00; /* हिरवी बॉर्डर */
+  background-color: rgba(0, 50, 0, 0.3); /* हिरव्या रंगाची थोडी पारदर्शक पार्श्वभूमी */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.basic-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #aaaaaa;
+  display: block;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.advanced-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 समान कॉलम */
+  gap: 20px; /* कॉलममधील अंतर */
+}
+
+.settings-column, .advanced-column, .rules-column {
+  background-color: rgba(0, 0, 0, 0.2); /* डेटा भागाच्या आत थोडी गडद पार्श्वभूमी */
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.settings-column h3, .advanced-column h3, .rules-column h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* हलकी विभाजक रेषा */
+  padding-bottom: 10px;
+}
+
+.setting-item {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between; /* नाव आणि व्हॅल्यू वेगळे करण्यासाठी */
+}
+
+.setting-item .value {
+  color: #ffffff; /* व्हॅल्यूचा रंग पांढरा */
+  font-weight: bold;
+}
+
+/* तुम्हाला ADVANCED आणि RULES मधील सर्व नोंदी वरीलप्रमाणे जोडाव्या लागतील */
+/* तसेच, Map Rotation साठी वेगळा विभाग */
+.map-rotation {
+    margin-top: 30px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 5px;
+}
+.map-rotation h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 0;
+}
