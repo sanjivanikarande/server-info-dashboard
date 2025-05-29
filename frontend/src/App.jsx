@@ -15,26 +15,24 @@ function App() {
         }
         const data = await response.json();
         setServerInfo(data);
-        setError(null); // डेटा यशस्वीरित्या मिळाल्यावर एरर साफ करा
+        setError(null);
       } catch (e) {
         setError(e.message);
-        setServerInfo(null); // एरर आल्यास जुना डेटा काढू
+        setServerInfo(null); 
       } finally {
         setLoading(false);
       }
     };
 
-    // ॲप सुरु झाल्यावर लगेच डेटा फेच करा
     fetchServerInfo();
+    
+    const intervalId = setInterval(fetchServerInfo, 5000);
 
-    // दर 5 सेकंदांनी डेटा फेच करण्यासाठी setInterval सेट करा
-    const intervalId = setInterval(fetchServerInfo, 5000); // 5000 ms = 5 सेकंद
-
-    // कॉम्पोनंट अनमाउंट झाल्यावर इंटरव्हल साफ करा
+    
     return () => clearInterval(intervalId);
-  }, []); // इथे [] आहे, म्हणजे हा useEffect फक्त एकदाच सेट होईल
+  }, []); 
 
-  // ... (बाकीचा JSX कोड जसाच्या तसा)
+  
   if (loading) {
     return <div className="container">Loading server information...</div>;
   }
@@ -50,7 +48,7 @@ function App() {
   }
 
   if (!serverInfo) {
-    // जेव्हा initial load नंतरही डेटा नसेल पण error नसेल
+    
     return <div className="container">No server information available.</div>;
   }
 
