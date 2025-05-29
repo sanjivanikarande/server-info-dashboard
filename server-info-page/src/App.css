@@ -1,4 +1,3 @@
-/* src/App.css */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,46 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a; /* गडद बॅकग्राउंड */
-  color: #ffffff; /* पांढरा मजकूर */
-  overflow: hidden; /* अनावश्यक स्क्रोल बार टाळण्यासाठी */
+  background-color: #1a1a1a; 
+  color: #ffffff;
+  overflow: hidden;
 }
 
 .App {
   display: flex;
-  height: 100vh; /* पूर्ण व्ह्यूपोर्ट उंची */
+  height: 100vh;
 }
 
-/* डाव्या बाजूचा नेव्हिगेशन बार */
 .left-sidebar {
-  width: 60px; /* लहान रुंदी */
-  background-color: #2a2a2a; /* थोडा वेगळा गडद रंग */
+  width: 60px;
+  background-color: #2a2a2a;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; /* आयकॉनमधील अंतर */
+  gap: 30px;
 }
 
 .nav-item {
-  color: #aaaaaa; /* हलका राखाडी रंग */
+  color: #aaaaaa; 
   font-size: 10px;
   text-align: center;
   cursor: pointer;
-  writing-mode: vertical-lr; /* मजकूर उभा करण्यासाठी */
-  transform: rotate(180deg); /* मजकूर उलट्या दिशेने करण्यासाठी */
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg); 
 }
 
 .nav-item.selected {
-  color: #ffffff; /* निवडल्यावर पांढरा */
+  color: #ffffff; 
   font-weight: bold;
 }
 
-/* मुख्य कंटेंट क्षेत्र */
 .main-content {
   flex-grow: 1;
   padding: 20px 40px;
-  overflow-y: auto; /* जर कंटेंट जास्त असेल तर स्क्रोलबारसाठी */
+  overflow-y: auto; 
 }
 
 .page-title {
@@ -56,7 +53,7 @@ body {
 }
 
 .server-overview {
-  background-color: #222222; /* थोडा गडद बॉक्स */
+  background-color: #222222; 
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -92,7 +89,7 @@ body {
 }
 
 .btn-join {
-  background-color: #007bff; /* निळा रंग */
+  background-color: #007bff; 
   color: #ffffff;
 }
 
@@ -114,10 +111,9 @@ body {
     color: #ffffff;
 }
 
-/* हिरव्या रंगात हायलाइट केलेला डेटा विभाग */
 .data-section {
-  border: 2px solid #00ff00; /* हिरवी बॉर्डर */
-  background-color: rgba(0, 50, 0, 0.3); /* हिरव्या रंगाची थोडी पारदर्शक पार्श्वभूमी */
+  border: 2px solid #00ff00; 
+  background-color: rgba(0, 50, 0, 0.3);
   padding: 20px;
   border-radius: 5px;
 }
@@ -146,12 +142,12 @@ body {
 
 .advanced-rules-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 समान कॉलम */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px; /* कॉलममधील अंतर */
 }
 
 .settings-column, .advanced-column, .rules-column {
-  background-color: rgba(0, 0, 0, 0.2); /* डेटा भागाच्या आत थोडी गडद पार्श्वभूमी */
+  background-color: rgba(0, 0, 0, 0.2); 
   padding: 15px;
   border-radius: 3px;
 }
@@ -162,7 +158,7 @@ body {
   margin-top: 0;
   margin-bottom: 15px;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* हलकी विभाजक रेषा */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
   padding-bottom: 10px;
 }
 
@@ -171,16 +167,14 @@ body {
   color: #cccccc;
   margin-bottom: 8px;
   display: flex;
-  justify-content: space-between; /* नाव आणि व्हॅल्यू वेगळे करण्यासाठी */
+  justify-content: space-between; 
 }
 
 .setting-item .value {
-  color: #ffffff; /* व्हॅल्यूचा रंग पांढरा */
+  color: #ffffff; 
   font-weight: bold;
 }
 
-/* तुम्हाला ADVANCED आणि RULES मधील सर्व नोंदी वरीलप्रमाणे जोडाव्या लागतील */
-/* तसेच, Map Rotation साठी वेगळा विभाग */
 .map-rotation {
     margin-top: 30px;
     background-color: #222222;
