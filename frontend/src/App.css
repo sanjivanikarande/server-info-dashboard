@@ -36,7 +36,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 1000px; /* Adjust as needed */
+  max-width: 1000px; 
 }
 
 .info-card {
@@ -85,10 +85,9 @@ main {
   font-weight: bold;
 }
 
-/* ... (बाकीचा कोड जसाच्या तसा) */
 
 .info-card {
-  background-color: #ffffff; /* पांढरा रंग */
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
